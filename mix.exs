@@ -98,6 +98,7 @@ defmodule NervesSystemBbb.MixProject do
 
   defp package_files do
     [
+      "uEnv.txt",
       "fwup_include",
       "linux",
       "rootfs_overlay",
