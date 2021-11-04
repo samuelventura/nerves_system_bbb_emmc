@@ -54,7 +54,7 @@ BeagleBone website has instructions for restoring Debian.
 From Debian:
 
 ```bash
-debian@beaglebone:~$ sudo dd if=/dev/zero of=/dev/mmcblk0 bs=1M count=100
+debian@beaglebone:~$ sudo dd if=/dev/zero of=/dev/mmcblk1 bs=1M count=100
 100+0 records in
 100+0 records out
 104857600 bytes (105 MB) copied, 5.72098 s, 18.3 MB/s

@@ -1064,7 +1064,7 @@ index 785fc15..110c426 100644
 +++ b/include/environment/ti/mmc.h
 @@ -11,20 +11,65 @@
  #define DEFAULT_MMC_TI_ARGS \
- 	"mmcdev=0\0" \
+ 	"mmcdev=1\0" \
  	"mmcrootfstype=ext4 rootwait\0" \
 -	"finduuid=part uuid mmc ${bootpart} uuid\0" \
 +	"finduuid=part uuid ${devtype} ${bootpart} uuid\0" \
