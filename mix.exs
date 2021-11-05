@@ -74,7 +74,7 @@ defmodule NervesSystemBbb.MixProject do
 
   defp description do
     """
-    Nerves System - BeagleBone Black, BeagleBone Green, PocketBeagle and more
+    Nerves System - BeagleBone Black eMMC
     """
   end
 
