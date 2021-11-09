@@ -1,0 +1,19 @@
+#build to ~/.nerves 
+MIX_ENV=prod mix compile 
+MIX_ENV=dev mix compile 
+#compiles and replaces artifact at ~/.nerves
+samuel@p3420:~$ ls .nerves/artifacts/nerves_system_bbb_emmc-portable-0.0.1 -l
+lrwxrwxrwx 1 samuel samuel 98 nov  8 21:20 .nerves/artifacts/nerves_system_bbb_emmc-portable-0.0.1 -> /home/samuel/github/nerves_system_bbb_emmc/.nerves/artifacts/nerves_system_bbb_emmc-portable-0.0.1
+
+git clone https://github.com/nerves-project/nerves_system_bbb.git nerves_system_bbb_emmc -b v2.12.1
+cd nerves_system_bbb_emmc
+git remote rename origin upstream
+git remote add origin git@github.com:samuelventura/nerves_system_bbb_emmc.git
+git checkout -b main
+git push origin main
+
+replace all mmcblk0 by mmcblk1
+copy am335x-boneblack.dtb to boot partition
+#copy uEnv.txt to boot partition (pending to see if needed)
+#alternative to uEnv.txt is to flash this custom uboot.bin to eMMC
+
