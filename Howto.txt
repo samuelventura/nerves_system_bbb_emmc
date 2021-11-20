@@ -17,3 +17,7 @@ copy am335x-boneblack.dtb to boot partition
 #copy uEnv.txt to boot partition (pending to see if needed)
 #alternative to uEnv.txt is to flash this custom uboot.bin to eMMC
 
+Research
+
+- Unable to SSH transfer to MMM eMMC
+- Image validation mechanism
